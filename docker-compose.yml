@@ -7,8 +7,8 @@ services:
         hostname: nginx
         restart: always
         ports:
-            - "80:80"
-            - "443:443"
+            - "8880:80"
+            - "8443:443"
         links:
             - mediadrop-uwsgi
         volumes_from:
