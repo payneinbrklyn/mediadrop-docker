@@ -13,7 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
 
 RUN apt-get -y install default-mysql-client && \
     apt-get -y install libjpeg-dev zlib1g-dev libfreetype6-dev default-libmysqlclient-dev && \
-    apt-get -y install build-essential python-dev python-pip python-setuptools python-virtualenv && \
+    apt-get -y install build-essential python3.9-full python3-pip python3-setuptools python3.9-venv && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
