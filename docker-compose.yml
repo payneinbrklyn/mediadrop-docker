@@ -10,6 +10,18 @@ mediadrop-nginx:
         - mediadrop-uwsgi
     volumes_from:
         - mediadrop-uwsgi
+mediadrop-mariadb:
+    image: mariadb
+    container_name: mediadrop-mariadb
+    hostname: mariadb
+    restart: always
+    environment:
+        - MYSQL_ROOT_PASSWORD=ZXCVfdsa1
+        - MYSQL_DATABASE=mediadrop
+        - MYSQL_USER=mediadrop
+        - MYSQL_PASSWORD=ZXCVfdsa1
+    volumes:
+        - /var/lib/mysql
 mediadrop-uwsgi:
     image: mediadrop-uwsgi
     container_name: mediadrop-uwsgi
@@ -31,15 +43,4 @@ mediadrop-uwsgi:
         - /wsgi
         - /mediadrop
     command: /start.sh
-mediadrop-mariadb:
-    image: mariadb
-    container_name: mediadrop-mariadb
-    hostname: mariadb
-    restart: always
-    environment:
-        - MYSQL_ROOT_PASSWORD=ZXCVfdsa1
-        - MYSQL_DATABASE=mediadrop
-        - MYSQL_USER=mediadrop
-        - MYSQL_PASSWORD=ZXCVfdsa1
-    volumes:
-        - /var/lib/mysql
+
