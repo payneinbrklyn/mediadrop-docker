@@ -28,7 +28,6 @@ RUN
 RUN pip install virtualenv 
 RUN pip install uwsgi uwsgitop
 
-RUN unset VIRTUALENVWRAPPER_VIRTUALENV_ARGS
 
 #startup script
 COPY start.sh /start.sh
