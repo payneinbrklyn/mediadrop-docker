@@ -1,0 +1,12 @@
+#!/bin/bash
+shopt +x expand_aliases
+source ~/.bashrc
+
+#Prep
+apt-get -y update && apt-get -y install apt-utils curl git wget vim
+
+#Python
+apt-get -y install default-mysql-client libjpeg-dev zlib1g-dev libfreetype6-dev default-libmysqlclient-dev build-essential python3.9-full python3-pip python3-setuptools python3.9-venv
+
+#Other Dependencies:
+apt-get install -y libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev

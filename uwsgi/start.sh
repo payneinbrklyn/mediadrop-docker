@@ -10,7 +10,7 @@ init_mediadrop() {
     rm -rf /venv/*
 
     #install python virtual environment
-    (cd /venv && virtualenv mediadrop)
+    (cd /venv && virtualenv --distribute --no-site-packages mediadrop)
 
     #if USE_OFFICIAL_GIT is unset
     if [ -z ${USE_OFFICIAL_GIT+x} ]; then

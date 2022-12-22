@@ -1,3 +1,7 @@
+Deprecated Package Downloads:
+https://www.dropbox.com/sh/buplc4tpohtj5jg/AABjQRak3Re8TLBBJldIYHHra?dl=0
+
+
 # Docker-Mediadrop
 ####Mediadrop on Docker with separate Nginx, uWSGI, and MariaDB containers
 
