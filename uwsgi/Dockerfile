@@ -11,7 +11,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
     apt-get -y install apt-utils curl git wget
 
-RUN apt-get -y install mysql-client && \
+RUN apt-get -y install default-mysql-client && \
     apt-get -y install libjpeg-dev zlib1g-dev libfreetype6-dev libmysqlclient-dev && \
     apt-get -y install build-essential python-dev python-pip python-setuptools python-virtualenv && \
     apt-get clean && \
