@@ -18,8 +18,8 @@ RUN apt-get -y install default-mysql-client && \
     rm -rf /var/lib/apt/lists/*
 
 #install uwsgi
-RUN pip install uwsgi
-RUN pip install uwsgitop
+RUN pip install virtual env 
+RUN pip install uwsgi uwsgitop
 
 #startup script
 COPY start.sh /start.sh
