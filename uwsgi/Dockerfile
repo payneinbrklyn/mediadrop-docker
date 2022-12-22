@@ -2,7 +2,7 @@
 # https://github.com/nmarus/docker-mediadrop
 # Nicholas Marus <nmarus@gmail.com>
 
-FROM debian:jessie
+FROM debian
 
 #setup apt
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
